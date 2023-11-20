@@ -51,12 +51,9 @@ app.put('/api/UpdateRating/:id', async(req, res) => {
                 const data = await Gym.findById(id)
                 console.log(data)
 
-                // data.lgbtRating += Number(updateData.lgbtRating)
-                // data.genderRating += Number(updateData.genderRating)
-                // data.ageRating += Number(updateData.ageRating)
-                data.genderRating = ((data.genderRating * data.numRatings) + Number(updateData.genderRating)) / (data.numRatings + 1.0); 
-                data.lgbtRating = ((data.lgbtRating * data.numRatings) + Number(updateData.lgbtRating)) / (data.numRatings + 1.0);             
-                data.ageRating = ((data.ageRating * data.numRatings) + Number(updateData.ageRating)) / (data.numRatings + 1.0);         
+                data.dedicateRating = ((data.dedicateRating * data.numRatings) + Number(updateData.dedicateRating)) / (data.numRatings + 1.0); 
+                data.diversityRating = ((data.diversityRating * data.numRatings) + Number(updateData.diversityRating)) / (data.numRatings + 1.0);             
+                data.communityRating = ((data.communityRating * data.numRatings) + Number(updateData.communityRating)) / (data.numRatings + 1.0);         
                 data.numRatings += 1
                 const success = await Gym.findByIdAndUpdate(id, data)
                 if(!success) {

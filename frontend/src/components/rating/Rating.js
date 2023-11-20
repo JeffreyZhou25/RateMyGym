@@ -19,16 +19,16 @@ function Rating() {
     const url = 'http://localhost:8080/api/Gym/' + documentID;
     const {data} = useSWR(url, fetcher)
 
-    const[lgbtqRating, setLGBTRating] = useState('');
-    const[genderRating, setGenderRating] = useState('');
-    const[ageRating, setAgeRating] = useState('');
+    const[lgbtqRating, setdiversityRating] = useState('');
+    const[dedicateRating, setdedicateRating] = useState('');
+    const[communityRating, setcommunityRating] = useState('');
     const[boxVisible, setBoxVisible] = useState(false);
     const[rated, setRated] = useState(false);
 
     const updateData = {
-        'lgbtRating': lgbtqRating,
-        'genderRating': genderRating,
-        'ageRating':ageRating
+        'diversityRating': lgbtqRating,
+        'dedicateRating': dedicateRating,
+        'communityRating':communityRating
     }
 
     const sendToDB = async() => {
@@ -80,7 +80,7 @@ function Rating() {
                             value={lgbtqRating}
                             className="slider"
                             id="lgbtqRange"
-                            onChange={(event) => setLGBTRating(event.target.value)}
+                            onChange={(event) => setdiversityRating(event.target.value)}
                             required
                         />
                     </div>
@@ -93,10 +93,10 @@ function Rating() {
                             min="1"
                             max="5"
                             step="0.1"
-                            value={genderRating}
+                            value={dedicateRating}
                             className="slider"
                             id="genderRange"
-                            onChange={(event) => setGenderRating(event.target.value)}
+                            onChange={(event) => setdedicateRating(event.target.value)}
                             required
                         />
                     </div>
@@ -109,10 +109,10 @@ function Rating() {
                             min="1"
                             max="5"
                             step="0.1"
-                            value={ageRating}
+                            value={communityRating}
                             className="slider"
                             id="ageRange"
-                            onChange={(event) => setAgeRating(event.target.value)}
+                            onChange={(event) => setcommunityRating(event.target.value)}
                             required
                         />
                     </div>

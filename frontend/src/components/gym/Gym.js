@@ -38,20 +38,20 @@ function Gym() {
                 <div className = "gym-body">
                     <h2 className="gym-category">Diversity: 
                         <div class="slidecontainer">
-                                <input type="range" min="1" max="5" value={data.lgbtRating} class="slider" id="myRange"></input>
+                                <input type="range" min="1" max="5" value={data.diversityRating} class="slider" id="myRange"></input>
                         </div>
                     </h2>
 
                         <p className="gym-category-description">Of gender, age, LGBTQ+</p>
                     <h2 className="gym-category">Dedication: 
                     <div class="slidecontainer">
-                            <input type="range" min="1" max="5" value={data.genderRating} class="slider" id="myRange"></input>
+                            <input type="range" min="1" max="5" value={data.dedicateRating} class="slider" id="myRange"></input>
                         </div>
                     </h2>
                         <p className="gym-category-description">Average gym goers or competitive bodybuilders?</p>
                     <h2 className="gym-category">Sense of Community: 
                         <div class="slidecontainer">
-                            <input type="range" min="1" max="5" step='0.1' value={data.ageRating} class="slider" id="myRange"></input>
+                            <input type="range" min="1" max="5" step='0.1' value={data.communityRating} class="slider" id="myRange"></input>
                         </div>
                     </h2>
                         <p className="gym-category-description">Friendly and supportive of each others goals</p>

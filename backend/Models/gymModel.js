@@ -15,15 +15,15 @@ const gymSchema = new Schema({
         type: Number,
         required: true
     },
-    lgbtRating: {
+    diversityRating: {
         type: Number,
         required: true
     },
-    genderRating: {
+    dedicateRating: {
         type: Number,
         required: true
     },
-    ageRating: {
+    communityRating: {
         type: Number,
         required: true
     }

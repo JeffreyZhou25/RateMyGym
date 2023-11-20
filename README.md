@@ -1,1 +1,2 @@
-# BostonHacks2023git
+# RateMyGym - BostonHacks2023
+
