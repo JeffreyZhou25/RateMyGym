@@ -1,2 +1,2 @@
-# RateMyGym - BostonHacks2023
-
+# RateMyGym
+Made at BostonHacks2023
